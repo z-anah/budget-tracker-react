@@ -1,38 +1,32 @@
 {
-  "name": "budget-tracker-react",
-  "version": "0.1.0",
-  "private": true,
-  "dependencies": {
-    "axios": "^1.7.9",
-    "cra-template": "1.2.0",
-    "framer-motion": "^12.0.11",
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0",
-    "react-hook-form": "^7.54.2",
-    "react-router-dom": "^7.1.5",
-    "react-scripts": "5.0.1",
-    "react-toastify": "^11.0.3",
-    "tailwindcss": "^4.0.3",
-    "vite": "^6.0.11",
-    "zustand": "^5.0.3"
+  "name": "react-tailwind",
+  "version": "6.0.0",
+  "description": "React and Tailwind CSS Starter Kit",
+  "keywords": [
+    "vite",
+    "react",
+    "tailwindcss"
+  ],
+  "license": "MIT",
+  "author": {
+    "name": "Amit Agarwal",
+    "email": "amit@labnol.org",
+    "url": "https://digitalinspiration.com/"
   },
+  "type": "module",
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
+    "build": "vite build",
+    "dev": "vite",
+    "inline": "INLINE=true vite build",
+    "preview": "vite preview",
+    "start": "vite"
   },
   "browserslist": {
     "production": [
       ">0.2%",
       "not dead",
-      "not op_mini all"
+      "not op_mini all",
+      "not ie 11"
     ],
     "development": [
       "last 1 chrome version",
@@ -40,8 +34,40 @@
       "last 1 safari version"
     ]
   },
-  "devDependencies": {
+  "dependencies": {
     "@tailwindcss/forms": "^0.5.10",
-    "web-vitals": "^4.2.4"
+    "@tailwindcss/typography": "^0.5.16",
+    "@tailwindcss/vite": "^4.0.0",
+    "axios": "^1.7.9",
+    "firebase": "^11.2.0",
+    "framer-motion": "^12.0.11",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "react-hook-form": "^7.54.2",
+    "react-query": "^3.39.3",
+    "react-router-dom": "^7.1.5",
+    "react-toastify": "^11.0.3",
+    "tailwindcss": "^4.0.3",
+    "zustand": "^5.0.3"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.19.0",
+    "@types/node": "^22.10.10",
+    "@types/react": "^19.0.8",
+    "@types/react-dom": "^19.0.3",
+    "@vitejs/plugin-react": "^4.3.4",
+    "eslint": "^9.19.0",
+    "eslint-config-prettier": "^10.0.1",
+    "eslint-plugin-prettier": "^5.2.3",
+    "eslint-plugin-react": "^7.37.4",
+    "eslint-plugin-react-hooks": "^5.1.0",
+    "eslint-plugin-react-refresh": "^0.4.18",
+    "eslint-plugin-simple-import-sort": "^12.1.1",
+    "globals": "^15.14.0",
+    "prettier": "^3.4.2",
+    "prettier-plugin-tailwindcss": "^0.6.11",
+    "vite": "^6.0.11",
+    "vite-plugin-singlefile": "^2.1.0",
+    "vite-tsconfig-paths": "^5.1.4"
   }
 }

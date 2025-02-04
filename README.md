@@ -112,5 +112,4 @@ npm install zustand
 npm install firebase
 npm install axios
 npm install react-query
-npm install @tailwindcss/forms --save-dev
 ```

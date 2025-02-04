@@ -95,5 +95,22 @@ npm run build
 vercel
 ```
 
-🔥 **MVP Focus:** Simple UI, fast transactions, local data storage.  
 🔗 **Goal:** Show frontend skills & gradual project improvement! 🚀
+
+---
+
+### **📚 Resources:**
+```
+npm install react react-dom
+npm install vite
+npm install tailwindcss
+npm install react-router-dom
+npm install react-hook-form
+npm install framer-motion
+npm install react-toastify
+npm install zustand
+npm install firebase
+npm install axios
+npm install react-query
+npm install @tailwindcss/forms --save-dev
+```

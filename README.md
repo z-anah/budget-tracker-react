@@ -34,10 +34,7 @@ When you are managing **multiple projects** within the **Budget Tracker**, you'l
 ### **Database Tables:**
 
 1. **Users**
-   - `userId` (string) – Unique user identifier
    - `email` (string) – User's email address
-   - `createdAt` (timestamp) – Account creation date
-   - `displayName` (string) – User's display name
    - `password` (string) – Encrypted password
 
 2. **Projects**  
@@ -57,13 +54,15 @@ When you are managing **multiple projects** within the **Budget Tracker**, you'l
    - `description` (string) – Description of the transaction
    - `date` (timestamp) – Date of the transaction
    - `createdAt` (timestamp) – Date when the transaction was added
+   - `nameAccount` (string) – Name of the account (e.g., "Cash", "Bank")
 
 4. **Categories**
    - `categoryId` (string) – Unique category identifier
-   - `projectId` (string) – Reference to the project this category belongs to
    - `name` (string) – Name of the category (e.g., "Food", "Entertainment")
    - `icon` (string) – Optional icon or image for the category
 
+   <!-- add emoji to categories -->
+   <!-- food: 🍔, salary: 💰, entertainment: 🎉, transport: 🚗, utilities: 💡, rent: 🏠, shopping: 🛍️, health: 🏥, education: 🎓, travel: ✈️
 ---
 
 ### **📂 Pages:**

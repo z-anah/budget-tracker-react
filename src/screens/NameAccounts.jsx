@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { collection, getDocs, addDoc } from 'firebase/firestore';
 import { db } from 'src/firebase/config';
+import LoadingSpinner from '@components/LoadingSpinner';
 
 const NameAccounts = () => {
   const [accounts, setAccounts] = useState([]);
@@ -58,13 +59,7 @@ const NameAccounts = () => {
   };
 
   if (isFetching) {
-    return (
-      <div className='flex h-screen items-center justify-center bg-gray-100'>
-        <div className='flex items-center justify-center'>
-          <div className='h-32 w-32 animate-spin rounded-full border-t-2 border-b-2 border-blue-500' />
-        </div>
-      </div>
-    );
+    return <LoadingSpinner />;
   }
 
   if (error) {

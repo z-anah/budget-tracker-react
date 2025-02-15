@@ -3,8 +3,10 @@ import { db } from 'src/firebase/config';
 import { useEffect, useState } from 'react';
 import { getAuth, onAuthStateChanged } from 'firebase/auth';
 import { Link } from 'react-router-dom';
+import LoadingSpinner from '../components/LoadingSpinner';
+import ErrorMessage from '../components/ErrorMessage';
 
-const BASE_PATH = '/budget-tracker-react';
+const BASE_PATH = import.meta.env.BASE_URL;
 
 const Home = () => {
   const [isFetching, setIsFetching] = useState(true);
@@ -72,21 +74,11 @@ const Home = () => {
   }
 
   if (isFetching) {
-    return (
-      <div className='flex h-screen items-center justify-center bg-gray-100'>
-        <div className='flex items-center justify-center'>
-          <div className='h-32 w-32 animate-spin rounded-full border-t-2 border-b-2 border-blue-500' />
-        </div>
-      </div>
-    );
+    return <LoadingSpinner />;
   }
 
   if (!isAuthenticated) {
-    return (
-      <div className='w-full max-w-sm p-4'>
-        <p>You are not authenticated</p>
-      </div>
-    );
+    return <ErrorMessage message='Please login to view this page' />;
   }
 
   const menuItems = [
@@ -123,7 +115,7 @@ const Home = () => {
             Add Project
           </button>
         </form>
-        {error && <p className='text-red-500'>{error}</p>}
+        {error && <ErrorMessage message={error} />}
 
         <h2 className='mt-4 text-xl font-bold'>Projects</h2>
         <ul className='my-2 rounded-lg border border-gray-200 bg-white text-sm font-medium text-gray-900 dark:border-gray-600 dark:bg-gray-700 dark:text-white'>

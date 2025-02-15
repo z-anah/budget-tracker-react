@@ -9,19 +9,20 @@ import Category from './screens/Category';
 import NameAccounts from './screens/NameAccounts';
 
 const App = () => {
-  const basePath = '/budget-tracker-react';
+  const BASE_PATH = import.meta.env.BASE_URL;
+
   
   return (
     <Routes>
-      <Route path={basePath} element={<Home />} />
-      <Route path={`${basePath}/auth/login`} element={<Login />} />
-      <Route path={`${basePath}/auth/signup`} element={<Signup />} />
-      <Route path={`${basePath}/project/:projectId`} element={<Project />} />
-      <Route path={`${basePath}/project/:projectId/transaction/:transactionId`} element={<Transaction />} />
-      <Route path={`${basePath}/project/:projectId/statistics`} element={<Statistics />} />
-      <Route path={`${basePath}/categories`} element={<Category />} />
-      <Route path={`${basePath}/accounts`} element={<NameAccounts />} />
-      <Route path="*" element={<Navigate to={basePath} />} />
+      <Route path={BASE_PATH} element={<Home />} />
+      <Route path={`${BASE_PATH}/auth/login`} element={<Login />} />
+      <Route path={`${BASE_PATH}/auth/signup`} element={<Signup />} />
+      <Route path={`${BASE_PATH}/project/:projectId`} element={<Project />} />
+      <Route path={`${BASE_PATH}/project/:projectId/transaction/:transactionId`} element={<Transaction />} />
+      <Route path={`${BASE_PATH}/project/:projectId/statistics`} element={<Statistics />} />
+      <Route path={`${BASE_PATH}/categories`} element={<Category />} />
+      <Route path={`${BASE_PATH}/accounts`} element={<NameAccounts />} />
+      <Route path="*" element={<Navigate to={BASE_PATH} />} />
     </Routes>
   );
 };

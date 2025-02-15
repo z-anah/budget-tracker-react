@@ -21,7 +21,6 @@ const App = () => {
       <Route path={`${basePath}/project/:projectId/statistics`} element={<Statistics />} />
       <Route path={`${basePath}/categories`} element={<Category />} />
       <Route path={`${basePath}/accounts`} element={<NameAccounts />} />
-      <Route path="/" element={<Home />} />
       <Route path="*" element={<Navigate to={basePath} />} />
     </Routes>
   );

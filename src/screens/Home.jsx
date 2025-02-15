@@ -2,6 +2,9 @@ import { collection, addDoc, getDocs } from 'firebase/firestore';
 import { db } from 'src/firebase/config';
 import { useEffect, useState } from 'react';
 import { getAuth, onAuthStateChanged } from 'firebase/auth';
+import { Link } from 'react-router-dom';
+
+const BASE_PATH = '/budget-tracker-react';
 
 const Home = () => {
   const [isFetching, setIsFetching] = useState(true);
@@ -87,8 +90,8 @@ const Home = () => {
   }
 
   const menuItems = [
-    { href: '/categories', label: 'Categories' },
-    { href: '/accounts', label: 'Accounts' },
+    { href: `${BASE_PATH}/categories`, label: 'Categories' },
+    { href: `${BASE_PATH}/accounts`, label: 'Accounts' },
   ];
 
   return (
@@ -125,21 +128,25 @@ const Home = () => {
         <h2 className='mt-4 text-xl font-bold'>Projects</h2>
         <ul className='my-2 rounded-lg border border-gray-200 bg-white text-sm font-medium text-gray-900 dark:border-gray-600 dark:bg-gray-700 dark:text-white'>
           {projects.map((project) => (
-            <a href={`/project/${project.id}`} key={project.id}>
+            <Link 
+              to={`${BASE_PATH}/project/${project.id}`} 
+              key={project.id}
+              relative="path"
+            >
               <li className='w-full border-b border-gray-200 px-4 py-2 dark:border-gray-600'>
                 {project.name}
               </li>
-            </a>
+            </Link>
           ))}
         </ul>
         <h2 className='mt-4 text-xl font-bold'>Menu</h2>
         <ul className='my-2 rounded-lg border border-gray-200 bg-white text-sm font-medium text-gray-900 dark:border-gray-600 dark:bg-gray-700 dark:text-white'>
           {menuItems.map((item, index) => (
-            <a href={item.href} key={index}>
+            <Link to={item.href} key={index}>
               <li className='w-full border-b border-gray-200 px-4 py-2 dark:border-gray-600'>
                 {item.label}
               </li>
-            </a>
+            </Link>
           ))}
         </ul>
       </div>

@@ -10,14 +10,14 @@ import NameAccounts from './screens/NameAccounts';
 
 const App = () => (
   <Routes>
-    <Route path='/' element={<Home />} />
-    <Route path='/project/:projectId' element={<Project />} />
-    <Route path='/project/:projectId/transaction/:transactionId' element={<Transaction />} />
-    <Route path='/project/:projectId/statistics' element={<Statistics />} />
-    <Route path='/auth/login' element={<Login />} />
-    <Route path='/auth/signup' element={<Signup />} />
-    <Route path='/categories' element={<Category />} />
-    <Route path='/accounts' element={<NameAccounts />} />
+    <Route path="/budget-tracker-react" element={<Home />} />
+    <Route path="/budget-tracker-react/project/:projectId" element={<Project />} />
+    <Route path="/budget-tracker-react/project/:projectId/transaction/:transactionId" element={<Transaction />} />
+    <Route path="/budget-tracker-react/project/:projectId/statistics" element={<Statistics />} />
+    <Route path="/budget-tracker-react/auth/login" element={<Login />} />
+    <Route path="/budget-tracker-react/auth/signup" element={<Signup />} />
+    <Route path="/budget-tracker-react/categories" element={<Category />} />
+    <Route path="/budget-tracker-react/accounts" element={<NameAccounts />} />
   </Routes>
 );
 

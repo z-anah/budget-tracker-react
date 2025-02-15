@@ -16,5 +16,5 @@ export default defineConfig({
     // eslint-disable-next-line no-undef
     process.env.INLINE ? viteSingleFile() : null,
   ].filter(Boolean),
-  base: '/budget-tracker-react/', // Add this line
+  base: '/budget-tracker-react', // Add this line
 });

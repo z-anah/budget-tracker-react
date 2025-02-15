@@ -9,7 +9,7 @@
   ],
   "license": "MIT",
   "type": "module",
-  "homepage": "https://z-anah.github.io/budget-tracker-react",
+  "homepage": "https://z-anah.github.io/budget-tracker-react/",
   "scripts": {
     "build": "vite build",
     "dev": "vite",

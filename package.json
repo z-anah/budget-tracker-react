@@ -9,12 +9,15 @@
   ],
   "license": "MIT",
   "type": "module",
+  "homepage": "https://z-anah.github.io/budget-tracker-react",
   "scripts": {
     "build": "vite build",
     "dev": "vite",
     "inline": "INLINE=true vite build",
     "preview": "vite preview",
-    "start": "vite"
+    "start": "vite",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "browserslist": {
     "production": [
@@ -58,6 +61,7 @@
     "eslint-plugin-react-hooks": "^5.1.0",
     "eslint-plugin-react-refresh": "^0.4.18",
     "eslint-plugin-simple-import-sort": "^12.1.1",
+    "gh-pages": "^6.3.0",
     "globals": "^15.14.0",
     "prettier": "^3.4.2",
     "prettier-plugin-tailwindcss": "^0.6.11",
